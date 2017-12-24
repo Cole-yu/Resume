@@ -1,0 +1,9 @@
+@import ".././variable";
+
+@media (max-width:768px) {                                  /*在小于768像素的屏幕里,这里的样式才生效*/
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*在768和991像素之间的屏幕里,这里的样式才生效*/
+}

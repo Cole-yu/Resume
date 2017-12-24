@@ -1,0 +1,14 @@
+@import ".././variable";
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /*在992和1199像素之间的屏幕里,这里的样式才生效*/
+  #account {
+    display:none;
+  }
+}
+
+@media (max-width:991px) {                                  /*在小于768像素的屏幕里,这里的样式才生效*/
+  #education-icon,#experience-icon{
+    display:none;
+  }
+}
