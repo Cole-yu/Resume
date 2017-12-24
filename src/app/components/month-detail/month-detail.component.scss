@@ -1,0 +1,54 @@
+@import "../../../styles/variable";
+
+.month-header{
+  border: solid 1px #ddd;
+  padding: $space;
+  .title{
+    font-size: 17px;
+  }
+  small{
+    color: $red;
+  }
+}
+.month-search{
+  border: solid 1px #ddd;
+  padding: $space;
+  input{
+    padding-left: 5px;
+    width: 25%;
+    height: 32px;
+    border: solid 1px #dddddd;
+    border-radius: 3px;
+  }
+}
+.month-content{
+  padding: 0;
+  margin: 0;
+  table{
+    width: 100%;
+    thead{
+      tr{
+        th{
+          padding: 5px;
+          text-align: center;
+          border: solid 1px #ddd
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          border: solid 1px #ddd;
+          padding: 5px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+}
+.month-footer{
+  float: right;
+  padding-right: $space;
+}

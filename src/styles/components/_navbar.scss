@@ -1,0 +1,37 @@
+//navbar的样式表
+@import "../variable";
+
+.site-nav{
+  float: left;
+  margin-top: $space;
+  padding-left: $space;
+  margin-bottom:$space ;
+  .nav{
+    color: #333333;
+    width: 15%;
+    &>li{
+      width: 200px;
+      border: solid 1px #cccccc;
+      border-radius: 0;
+      margin: 0;                      //可以通过设置li的margin来取消li边框之间的间隙
+      background-color: $white;
+      &>a{
+        color: $font-color;
+        &:hover{
+          color: $blue;
+          border-radius: 0;
+        }
+        &:focus{
+        }
+      };
+      &:hover{
+
+      }
+      &.active>a{
+        background-color:$nav-background;
+        color: $white;
+        border-radius: 0;
+      }
+    }
+  }
+}

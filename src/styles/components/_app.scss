@@ -1,0 +1,47 @@
+//appComponent组件的样式表
+@import "../../styles/variable";
+
+.site-header{
+  color: $white;
+  padding-top: 20px;
+  height: 60px;
+  background-color: $header-background;
+  .header-title{
+    font-size: 17px;
+    margin-left: 2%;
+  }
+  .time{
+    margin-left:10%;
+  }
+  .logout{
+    padding-right: $space;
+  }
+}
+.home{
+  background-color:$white;
+  color: $font-color;
+  padding-top: 5px;
+  padding-left: $space;
+  height: 30px;
+}
+
+.site-content{
+  min-height: 550px;
+  background-color: $white;
+  width: 80%;
+  float:left;
+  margin-left: $space;
+  margin-top:$space ;
+  margin-bottom:$space ;
+
+}
+.site-footer{
+  clear: both;
+  background-color: $footer-background;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
+  span{
+    color:$white;
+  }
+}

@@ -1,13 +1,15 @@
+//引入组件的样式表
 @import "variable";
 @import "media/media-xs";
 @import "media/media-sm";
 @import "media/media-md";
 @import "media/media-lg";
-@import "./components/resume";
+@import "./components/app";
+@import "./components/navbar";
 
 body {
-  background-color:$black;
-  color:$white;
+  background-color: #efefef;
+  color: $font-color;
   font-family:"Microsoft YaHei","微软雅黑",Helvetica,Tahoma,Arial,STXihei,"华文细黑",sans-serif;
   font-size: $font-size-base;
 }

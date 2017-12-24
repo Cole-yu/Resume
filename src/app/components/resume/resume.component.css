@@ -1,0 +1,63 @@
+#photo {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+#aboutMe {
+  padding-bottom: 10px; }
+
+#information {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px; }
+
+#experience {
+  padding-bottom: 20px; }
+
+#skill {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+#education {
+  padding-bottom: 20px; }
+
+.rowBackground-white {
+  background-color: #fff;
+  color: #333333; }
+
+.font-white {
+  background-color: #0e0e0e;
+  color: #fff; }
+
+ul {
+  list-style-type: none;
+  float: left;
+  padding-left: 20px; }
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0e0e0e; }
+
+.icon-font {
+  border-radius: 100%;
+  background-color: #0e0e0e;
+  line-height: 25px; }
+
+.padding-top-10 {
+  padding-top: 10px; }
+
+.line-vertical {
+  background-color: #ff9f20;
+  width: 5px;
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right: 5PX; }
+
+.line-vertical-devision {
+  border-right-style: solid;
+  border-right-color: #000; }
+
+/*# sourceMappingURL=resume.component.css.map */

@@ -1,124 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<router-outlet></router-outlet>
-<div class="container">
-  <div class="row rowBackground-white">
-    <div id="photo" class="col-md-3 font-white">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <img class="img-rounded img-responsive" [src]="user.picSrc" [alt]="user.picArt" />
-        </div>
-      </div>
-      <div class="row" >
-        <div class="col-md-6 col-md-offset-3">
-          <h4 class="text-center">{{user.name}}</h4>
-          <div class="text-center">{{user.job}}</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-9">
-          <div class="row" id="aboutMe">
-            <h1 class="text-center"><strong>{{aboutMe.title}}</strong></h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-9">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="text-left" style="word-break:break-all;">{{aboutMe.content}}</p>
-            </div>
-          </div>
-          <div class="row" id="account">
-            <div class="col-md-6 col-sm-6 col-xs-6" *ngFor="let item of aboutMe.account">
-              <img [src]="item.iconSrc" />
-              <a [href]="item.url">{{item.type}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row rowBackground-white" style="opacity:0.9;">
-    <div id="information" class="col-md-3  font-white">
-      <div *ngFor="let info of information">
-        <h4>{{info.title}}</h4>
-        <span>{{info.value}}</span>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="row" id="experience">
-        <div class="col-md-3 padding-top-10">
-          <button class="btn btn-primary btn-lg pull-right icon-font" id="experience-icon">
-            <span class="glyphicon glyphicon-briefcase "></span>
-          </button>
-        </div>
-        <div class="col-md-9">
-          <h3>工作经验</h3>
-        </div>
-      </div>
-      <!--每次工作经验-->
-      <div class="row" *ngFor="let exp of experience">
-        <div class="col-md-3 col-sm-4 col-xs-4">
-          <hr class="pull-left line-vertical" />
-          <div class="pull-left">
-            <h4>{{exp.date}}</h4>
-            <span>{{exp.company}}</span>
-          </div>
-        </div>
-        <div class="col-md-9 col-sm-8 col-xs-8">
-          <p class="text-justify padding-top-10">
-            {{exp.content}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row rowBackground-white">
-    <div id="skill" class="col-md-3 font-white">
-      <div class="row">
-        <div class="col-md-12">
-          <h4>我擅长的</h4>
-        </div>
-      </div>
-      <div class="row">
-        <ul style="margin-right: 20px;">
-          <li *ngFor="let item of skill" style="padding-left: 0;height: 50px; " class="col-sm-12">
-            <span>{{item.title}}</span>
-            <progressbar class="progress progress-striped active" [value]="item.value" [max]="100"><i>{{item.value}}/100</i></progressbar>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="row" id="education">
-        <div class="col-md-3 padding-top-10">
-          <button class="btn btn-primary btn-lg pull-right icon-font" id="education-icon">
-            <span class="glyphicon glyphicon-book"></span>
-          </button>
-        </div>
-        <div class="col-md-9">
-          <h3>教育状况</h3>
-        </div>
-      </div>
-      <!--每次教育经历-->
-      <div class="row" *ngFor="let edu of education">
-        <div class="col-md-3 col-sm-4 col-xs-4">
-          <hr class="pull-left line-vertical" />
-          <div class="pull-left">
-            <h4>{{edu.data}}</h4>
-            <span>{{edu.university}}</span>
-          </div>
-        </div>
-        <div class="col-md-9 col-sm-8 col-xs-8">
-          <p>{{edu.content}}</p>
-        </div>
-      </div>
-    </div>
+<div class="site-header" id="header">
+  <span class="header-title"><strong>601室费用档案管理系统</strong></span>
+  <span class="time">2017年5月14日0:14:00</span>
+  <label for="" class="logout pull-right">注销</label>
+</div>
+<div class="home">
+  <span class="glyphicon glyphicon-home"></span>
+  <span>主页/</span>
+  <span>您好！Admin</span>
+</div>
+<div class="site-nav">
+  <ul class="nav nav-pills nav-stacked">
+    <li routerLinkActive="active" href="#" *ngFor="let nav of navbar" routerLink="{{nav.link}}"><a><strong>{{nav.name}}</strong></a></li>
+  </ul>
+</div>
+
+<div class="site-content">
+  <router-outlet></router-outlet>
+</div>
+<div class="site-footer">
+  <div >
+    <span><strong>版权所有，仿冒必究</strong></span>
+    <span style="margin-left: 20px;"><strong>CopyRight@2017 By YFX,ALL Rights Reserved</strong></span>
   </div>
 </div>
+
+
 
 

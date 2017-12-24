@@ -1,0 +1,47 @@
+<div class="month-header">
+  <span class="title"><strong>每月明细</strong></span><small>（注：水费和燃气费为2个月收取一次；所有金额保留2位小数）</small>
+</div>
+<div class="month-search">
+  <input type="text" placeholder="请输入查询内容"/>
+</div>
+<div class="month-content">
+<table>
+  <thead>
+    <tr>
+      <th style="width: 8%">编号</th>
+      <th>月份</th>
+      <th style="width: 15%">电费(/元)</th>
+      <th style="width: 15%">水费(/元)</th>
+      <th style="width: 15%">燃气费(/元)</th>
+      <th style="width: 10%">人数(/人)</th>
+      <th style="width: 15%">人均总费用(/元)</th>
+      <th style="width: 8%">状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of monthDetails">
+      <td>{{item.code}}</td>
+      <td>{{item.month}}</td>
+      <td>{{item.electric}}</td>
+      <td>{{item.water}}</td>
+      <td>{{item.gas}}</td>
+      <td>{{item.person}}</td>
+      <!--管道操作符-->
+      <td>{{(item.electric+item.water+item.gas)/item.person|number:'1.2-2'}}</td>
+      <td>{{item.status}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="month-footer">
+  <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+</div>
+<div>
+  <ul class="nav nav-pills">
+    <li routerLink="./" routerLinkActive="active"><a>index</a></li>
+    <li routerLink="./view"  routerLinkActive="active"><a>view</a></li>
+    <li routerLink="./insert"  routerLinkActive="active"><a>insert</a></li>
+    <li routerLink="./update"  routerLinkActive="active"><a>update</a></li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
