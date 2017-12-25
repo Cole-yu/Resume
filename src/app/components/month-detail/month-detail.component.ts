@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {InsertDetailComponent} from './insert-detail/insert-detail.component';
 import {UpdateDetailComponent} from './update-detail/update-detail.component';
 import {ViewDetailComponent} from './view-detail/view-detail.component';
+import {tr} from 'ngx-bootstrap';
+import {parse} from 'ts-node/dist';
 
 @Component({
   selector: 'app-month-detail',
@@ -41,6 +43,16 @@ export class MonthDetailComponent implements OnInit {
   pageChanged(event: any): void {
     console.log('Page changed to: ' + event.page);
     console.log('Number items per page: ' + event.itemsPerPage);
+  }
+
+  public viewDetail(code:string){
+      //console.log(code);
+      //console.log(typeof(code));
+      let index=parseInt(code);
+      console.log(this.monthDetails[index-1]);
+      // let e=event||window.event;
+      // console.log(e);
+      // console.log(e.screenX,e.screenY);
   }
 
 }

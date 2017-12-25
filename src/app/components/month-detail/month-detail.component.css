@@ -1,0 +1,45 @@
+.month-header {
+  border: solid 1px #ddd;
+  padding: 2%; }
+  .month-header .title {
+    font-size: 17px; }
+  .month-header small {
+    color: #d9534f; }
+
+.month-search {
+  border: solid 1px #ddd;
+  padding: 2%; }
+  .month-search input {
+    padding-left: 5px;
+    width: 25%;
+    height: 32px;
+    border: solid 1px #dddddd;
+    border-radius: 3px; }
+
+.month-content {
+  padding: 0;
+  margin: 0; }
+  .month-content table {
+    width: 100%; }
+    .month-content table thead tr th {
+      padding: 5px;
+      text-align: center;
+      border: solid 1px #ddd; }
+    .month-content table tbody tr td {
+      border: solid 1px #ddd;
+      padding: 5px;
+      text-align: center; }
+    .month-content table tbody tr:hover {
+      background-color: #ddd; }
+      .month-content table tbody tr:hover td {
+        font-weight: bold; }
+    .month-content table tbody tr:active {
+      border: none;
+      background-color: #5cb85c;
+      color: white; }
+
+.month-footer {
+  float: right;
+  padding-right: 2%; }
+
+/*# sourceMappingURL=month-detail.component.css.map */

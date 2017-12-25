@@ -1,0 +1,66 @@
+.product{
+  float: left;
+  width: 50%;
+  padding: 2%;
+  table{
+    thead{
+      tr{
+        th{
+          text-align: center;
+          border:soild 1px #333;
+          padding: 5px;
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          text-align: center;
+          border:soild 1px #dddddd;
+          padding: 5px;
+        }
+       &:hover{
+         background-color: #ccc;
+         td{
+           font-weight:bold;
+         }
+       }
+      }
+    }
+  }
+}
+.selected{
+  float: left;
+  width: 50%;
+  padding: 2%;
+  ul{
+    li{
+      list-style-type: none;
+      padding: 10px;
+      float: left;
+      span{
+        padding: 8px;
+        background-color: #005ca9;
+        color: white;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.option{
+  clear: both;
+  width: 50%;
+  padding: 2%;
+  button{
+    padding: 5px;
+    width: 100px;
+    background-color:#005ca9;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    &:hover{
+      background-color: #1f2db8;
+    }
+  }
+}

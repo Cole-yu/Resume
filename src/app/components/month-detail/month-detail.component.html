@@ -19,14 +19,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of monthDetails">
+    <tr *ngFor="let item of monthDetails"  routerLink="./view" routerLinkActive="active" (click)="viewDetail(item.code)">
       <td>{{item.code}}</td>
       <td>{{item.month}}</td>
       <td>{{item.electric}}</td>
       <td>{{item.water}}</td>
       <td>{{item.gas}}</td>
       <td>{{item.person}}</td>
-      <!--管道操作符-->
+      <!--管道操作符,整数部分最少1位，默认位1；小数部分最少2位，默认为0，最多2位-->
       <td>{{(item.electric+item.water+item.gas)/item.person|number:'1.2-2'}}</td>
       <td>{{item.status}}</td>
     </tr>

@@ -20,4 +20,8 @@ import {UpdateDetailModule} from './update-detail/update-detail.module';
   exports:[RouterModule],
   declarations: [ViewDetailComponent, InsertDetailComponent, UpdateDetailComponent]
 })
-export class MonthDetailModule { }
+export class MonthDetailModule {
+
+
+
+}
