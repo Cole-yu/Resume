@@ -1,0 +1,72 @@
+//margin:auto法-----方法一
+.content{
+  width: 600px;
+  height:300px;
+  background-color: #613d7c;
+  position: relative;
+  .check{
+    width: 200px;
+    height: 100px;
+    margin:auto;
+    background-color: #005ca9;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+////负margin法-------方法二
+//.content{
+//  width: 600px;
+//  height:300px;
+//  background-color: #613d7c;
+//  position: relative;
+//  .check{
+//    width: 100px;
+//    height: 100px;
+//    background-color: #005ca9;
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    margin-left: -50px;
+//    margin-top: -50px;
+//  }
+//}
+
+
+////未脱离文档流方法
+//.content{
+//  width: 600px;
+//  height:300px;
+//  background-color: #613d7c;
+//  vertical-align: middle;
+//  text-align: center;
+//  display: table-cell;
+//  .check{
+//    background-color: #005ca9;
+//    width: 100px;
+//    height: 100px;
+//    vertical-align:middle;
+//  }
+//}
+
+////弹性盒子法（Flex布局）
+////align-items控制垂直方向的居中，justify-content控制水平方向的居中
+//.content{
+//  width: 600px;
+//  height:300px;
+//  background-color: #613d7c;
+//  display:flex;
+//  display:-webkit-flex;
+//  -webkit-align-items: center;
+//  align-items: center;
+//  -webkit-justify-content: center;
+//  justify-content:center;
+//  .check{
+//    background-color: #005ca9;
+//    padding: 10px;
+//  }
+//}
