@@ -1,5 +1,6 @@
 //margin:auto法-----方法一
 .content{
+  float: left;
   width: 600px;
   height:300px;
   background-color: #613d7c;
@@ -70,3 +71,185 @@
 //    padding: 10px;
 //  }
 //}
+
+.css{
+  display: inline;
+  float: left;
+  width: 400px;
+  height: 100px;
+  background-color: #ddd;
+  .title{
+    background-color: #005ca9;
+    font-weight: bold;
+    border-left: solid red 5px;
+    padding-left: 10px;
+    vertical-align: text-top;
+    .date{
+      color:#ff9f20;
+      line-height:0.9;
+      font-size: 36px;
+    }
+    .school{
+      padding-top: 5px;
+      line-height: 1.1;
+      font-size: 24px;
+    }
+  }
+}
+
+
+@keyframes myFirstAnimation {
+  0%   {background: red; left:2%; top:2%;}
+  25%  {background: yellow; left:90%; top:2%;}
+  50%  {background: blue; left:90%; top:85%;}
+  75%  {background: green; left:2%; top:85%;}
+  100% {background: red; left:2%; top:2%;}
+}
+/* Safari 与 Chrome */
+@-webkit-keyframes myFirstAnimation {
+  0%   {background: red; left:0px; top:0px;}
+  25%  {background: yellow; left:200px; top:0px;}
+  50%  {background: blue; left:200px; top:200px;}
+  75%  {background: green; left:0px; top:200px;}
+  100% {background: red; left:0px; top:0px;}
+}
+.ani{
+  clear: both;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  position: fixed;         //必须指定position为absolute或relative,fixed
+  z-index: 99;
+  //动画名称
+  -webkit-animation-name:myFirstAnimation;
+  -moz-animation-name: myFirstAnimation;
+  -o-animation-name:myFirstAnimation;
+  animation-name:myFirstAnimation ;
+  //动画时间
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  //动画次数
+  -webkit-animation-iteration-count: 100;
+  -moz-animation-iteration-count: 100;
+  -o-animation-iteration-count: 100;
+  animation-iteration-count:1 ;
+  //动画是否逆向播放
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  animation-direction: normal;
+  //动画是否播放
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state:running;
+  //动画的速度曲线,linear
+  -webkit-animation-timing-function:ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+.trans{
+  clear: both;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  background-color: #ff9f20;
+
+  //规定变化改变的时间
+  -webkit-transition:transform 5s,width 5s;
+  -moz-transition:transform 5s,width 5s;
+  -o-transition:transform 5s,width 5s;
+  transition:transform 5s,width 5s;
+  //延迟执行，有些效果需要平滑过度
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  //-ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+
+  &:hover{
+    width: 300px;
+    transform:rotateY(360deg);
+  }
+}
+.position{
+  position: relative;
+  border: solid 1px #333;
+  padding: 20px;
+  img{
+    max-width: 20%;
+    padding: 6px;
+    border: 1px solid #333333;
+    //-webkit-filter:grayscale(100%);
+    //filter:grayscale(100%);
+    &:hover,
+    &:focus{
+      cursor: pointer;    //鼠标变化成手形状
+    }
+  }
+  .word{
+    position: absolute;
+    top:50px;
+    left:20px;
+    color: red;
+    font-weight: bold;
+  }
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

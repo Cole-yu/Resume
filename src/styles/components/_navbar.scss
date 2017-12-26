@@ -13,7 +13,7 @@
       width: 200px;
       border: solid 1px #cccccc;
       border-radius: 0;
-      margin: 0;                      //可以通过设置li的margin来取消li边框之间的间隙
+      margin: 0;                            //可以通过设置li的margin来取消li边框之间的间隙
       background-color: $white;
       &>a{
         color: $font-color;
@@ -31,6 +31,29 @@
         background-color:$nav-background;
         color: $white;
         border-radius: 0;
+      }
+      ul{
+        padding: 0;
+        li{
+          list-style-type: none;
+          padding: 5% 5% 5% 15%;
+        &>a{
+          color: $font-color;
+          text-decoration:none;     //取消a标签的下划线
+          }
+          &:hover{
+            strong{
+              color: $blue;
+            }
+            border-radius: 0;
+            background-color: #dddddd;
+          }
+        &.active>a{
+            background-color:$nav-background;
+            color: $white;
+            border-radius: 0;
+          }
+        }
       }
     }
   }

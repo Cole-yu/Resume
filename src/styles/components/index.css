@@ -1,16 +1,12 @@
 /*
 Error: Invalid GBK character "\xE6"
-        on line 1 of knowledge.component.scss
+        on line 1 of index.scss
 
-1: //margin:auto法-----方法一
-2: .content{
-3:   float: left;
-4:   width: 600px;
-5:   height:300px;
-6:   background-color: #613d7c;
+1: //Index样式表
+2: @import "../../styles/variable";
 
 Backtrace:
-knowledge.component.scss:1
+index.scss:1
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.4/lib/sass/util.rb:1043:in `rescue in block in find_encoding_error'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.4/lib/sass/util.rb:1040:in `block in find_encoding_error'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.4/lib/sass/util.rb:1039:in `each'
@@ -37,4 +33,4 @@ C:/Ruby24-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid GBK character \"\xE6\"\A         on line 1 of knowledge.component.scss\A \A 1: //margin:auto法-----方法一\A 2: .content{\A 3:   float: left;\A 4:   width: 600px;\A 5:   height:300px;\A 6:   background-color: #613d7c;"; }
+  content: "Error: Invalid GBK character \"\xE6\"\A         on line 1 of index.scss\A \A 1: //Index样式表\A 2: @import \"../../styles/variable\";"; }
