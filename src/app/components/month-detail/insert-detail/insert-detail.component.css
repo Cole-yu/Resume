@@ -1,16 +1,10 @@
-.hov {
-  position: absolute;
-  left: 98%;
-  top: 2%;
-  width: 5px;
-  height: 30px;
-  background-color: red;
-  -webkit-transition: height 3s;
-  -moz-transition: height 3s;
-  -ms-transition: height 3s;
-  -o-transition: height 3s;
-  transition: height 3s; }
-  .hov:hover {
-    height: 300px; }
+table {
+  border: solid  1px #0e0e0e; }
+  table th {
+    border: solid  1px #0e0e0e;
+    padding: 5px; }
+  table td {
+    border: solid 1px #0e0e0e;
+    padding: 5px; }
 
 /*# sourceMappingURL=insert-detail.component.css.map */

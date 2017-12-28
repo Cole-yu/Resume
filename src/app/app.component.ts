@@ -27,13 +27,46 @@ export class AppComponent implements OnInit{
      var date=new Date();
     //console.log(typeof(date.getFullYear().toString()));         //数字2017转为文字
      let year=date.getFullYear().toString();
-     let month=date.getMonth().toString();
-     let day=date.getDate().toString();
-     this.sysTime=year+month+day;
-     console.log(this.sysTime);
+
+     let month_string=date.getMonth().toString();
+     //todo 调用ttTime函数报错
+      //let month=this.ttTime(month_string);
+      let month=month_string.substring(month_string.length-2,month_string.length);
+
+     let day_string=date.getDate().toString();
+     let day=day_string.substring(day_string.length-2,day_string.length);
+
+     let hour_string="0"+date.getHours().toString();
+     let hour=hour_string.substring(hour_string.length-2,hour_string.length);
+
+     let min_string="0"+date.getMinutes().toString();
+     let min=min_string.substring(min_string.length-2,min_string.length);
+
+     let sec_string="0"+date.getSeconds().toString();
+     let sec=sec_string.substring(sec_string.length-2,sec_string.length);
+
+     this.sysTime=year+"年"+month+"月"+day+"日"+" "+hour+":"+min+":"+sec;
+     // console.log(this.sysTime);
+
+    //innerHTML与innerText的区别，table用的是innerText
+     document.getElementsByClassName("time")[0].innerHTML=this.sysTime;
+  }
+
+
+  //设置时间格式的函数 substring(start,end);从start开始，end结束，var str="abcde" str.substring(3,5)  //de---0a/1b/2c/3d/4e/5
+
+  //todo 不知道为什么在Time中调用ttTime会出现报错
+  public ttTime(time:string):any {
+    console.log("ok");
+    let time_string="0"+time;
+    time_string=time_string.substring(time_string.length-2,time_string.length);
+    console.log(time_string);
+    return time_string
   }
 
   public settime(){
+    //在调用时，先执行一边Time函数，否则Time加入到事件队列中，会有1000ms的空窗期
+    this.Time();
     setInterval(this.Time,1000);
   }
 
