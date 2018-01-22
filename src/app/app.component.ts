@@ -28,7 +28,7 @@ export class AppComponent implements OnInit{
     //console.log(typeof(date.getFullYear().toString()));         //数字2017转为文字
      let year=date.getFullYear().toString();
 
-     let month_string=date.getMonth().toString();
+     let month_string=(date.getMonth()+1).toString();   //getMonth()获取的是一个数组，为[0,11]的数组
      //todo 调用ttTime函数报错
       //let month=this.ttTime(month_string);
       let month=month_string.substring(month_string.length-2,month_string.length);
